@@ -5,6 +5,10 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
 
+# For VS Code Remote in container.
+## Create directory for rust-analyzer extension to download language server binary.
+RUN mkdir -p ~/.local/bin
+
 # Install musl libc with static library
 RUN dnf -y install musl-devel musl-libc-static musl-gcc musl-clang
 
