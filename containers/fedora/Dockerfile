@@ -42,4 +42,6 @@ RUN python3 -m pip install PyGithub
 RUN rustup update
 RUN dnf -y update
 
+RUN rustup component add rust-src
+
 CMD /bin/bash
